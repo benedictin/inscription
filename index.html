@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+</head>
+<body>
+    <div class="conteneur">
+        <form action="" name="myform"  onsubmit="return validateform()">
+            <h1>Fiche D'inscription</h1>
+            <div>
+               <label for="nom">Nom:</label>
+               <input type="text" name="" id="nom">
+               <div style="color: red;" id="messagenom"></div>
+           </div>
+           <div>
+               <label for="prenom">Prenom:</label>
+               <input type="text" name="" id="prenom">
+               <div style="color: red;" id="messageprenom"></div>
+           </div>
+           <div>
+               <label for="age">Age:</label>
+               <input type="number" name="age" placeholder="Age" id="age">
+               <div style="color: red;" id="messageage"></div>
+           </div>
+           <div class="identites">
+                <label for="" class="genre">Genre:</label>
+                <div class="identite">
+                    <input type="radio"  name="sex"  id="homme"><label for="homme">Masculin</label>
+                    <input type="radio"  name="sex" id="femme" ><label for="femme" >Femin</label>
+                </div>
+           </div>
+           <div class="formation">
+                <label for="" class="module">Formation :</label>
+                <div class="programmation">
+                    <input type="radio"  name="developpement"  id="web"><label for="web">Web</label>
+                    <input type="radio"  name="developpement" id="mobile" ><label for="mobile" >Mobile</label>
+                </div>
+            </div>
+            <div id="messageformation"></div>
+           <div>
+               <label for="date">Date:</label>
+               <input type="date" id="date">
+               <div style="color: red;" id="messagedate"></div>
+           </div>
+           <div class="bouton"> 
+               <input type="submit" value="submit">    
+           </div>
+           <div id="vide"></div>
+           
+      </form>
+    </div>
+   <script>
+     function validateform(){
+         let nom=document.getElementById('nom');
+         let messageNom=document.getElementById('messagenom');
+         let prenom=document.getElementById('prenom');
+         let messagePrenom=document.getElementById('messageprenom');
+         let age=document.getElementById('age');
+         let messageageAge=document.getElementById('messageage');
+         let formation=document.getElementById("formation");
+         let resultat=document.getElementById('resultat');
+         let date=document.getElementById('date').value;
+         let messageDate=document.getElementById('messagedate')
+         let dateActuel=new Date();
+         let annee=dateActuel.getFullYear();
+         let mois=String(dateActuel.getMonth()+1).padStart(2,'0');
+         let jour=dateActuel.getDate();
+         let dates=annee + '-'+ mois +'-' + jour;
+
+         if(nom.value.length<5 || nom.value.length>15){
+            messageNom.innerHTML='le nom doit contenir 5 à 15 caractere'
+            return false
+         }else{
+            messageNom.innerHTML=''
+         }
+        if(prenom.value.length<4 || prenom.value.length>10){
+            messagePrenom.innerHTML='le prenom doit contenir 5 à 15 caractere'
+            return false
+        }else{
+            messagePrenom.innerHTML=''
+        }
+        if(age.value<18){
+            messageageAge.innerHTML='valide que pour le majeur'
+            return false
+        }else{
+            messageageAge.innerHTML=''
+        }
+        if(date != dates){
+            messageDate.innerHTML='date erroné';
+            return false
+        }else{
+            messageDate.innerHTML=''
+        }
+        
+    } 
+    let web=document.getElementById('web');
+    let messageformation=document.getElementById('messageformation');
+    web.addEventListener('click',function(){
+    messageformation.innerHTML='on: a HTML5,CSS,Javascript'
+    })
+    let mobile=document.getElementById('mobile');
+    mobile.addEventListener('click',function(){
+        messageformation.innerHTML='on a: Java,Koltin,Flutter et Swiftui'
+    })
+   </script>
+</body>
+</html>

@@ -1,0 +1,97 @@
+*{
+    margin: 0;
+    box-sizing: border-box;
+}
+body{
+    background-color: #c7c8c9;
+}
+h1{
+    text-align: center;
+    margin-bottom: 40px;
+}
+form{
+    text-align: center;
+}
+.conteneur{
+    background-color: white;
+    width: 40%;
+    margin: 60px auto;
+    padding: 100px;
+    border-radius: 30px;
+}
+input{
+    margin: 5px;
+    width: 40%;;
+}
+#nom,#date{
+    margin-left: 23px;
+}
+#age{
+    margin-left: 29px;
+    margin-bottom: 20px;
+}
+.genre{
+    
+    margin-left: 90px;
+   
+}
+.bouton input{
+  margin-left:20px;
+  width: 50%;
+  height: 40px;
+  border-radius: 10px;
+  margin-top: 20px;
+}
+#messagenom,#messageprenom,#messageage{
+    font-size: 14px;
+}
+.identite{
+    display: flex;
+    align-items: center;
+    width: 170px;
+    margin-bottom: 20px ;
+    margin-left: 4px;
+}
+.identites{
+    display: flex;
+}
+.formation{
+    display: flex;
+    margin-left: 93px;
+}
+
+.programmation{
+    display: flex;
+    align-items: center;
+    margin-left: 9px;
+    width: 140px;
+}
+.module{
+    margin-top: 12px;
+}
+@media screen and (max-width:1024px){
+    h1{
+        color: blue;
+    }
+}
+@media screen and (max-width:680px){
+    h1{
+        font-size: 20px;
+    }
+   .conteneur{
+    margin: auto;
+    width: 75%;
+   }
+   .genre,.formation{
+    margin-left: 10px;
+   }
+   input{
+    width: 50%;
+   }
+   #messagenom,#messageprenom,#messagedate{
+    font-size: 10px;
+   }
+
+ }
+
+ 
