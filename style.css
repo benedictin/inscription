@@ -45,6 +45,9 @@ input{
 #messagenom,#messageprenom,#messageage{
     font-size: 14px;
 }
+#messagenom,#messageprenom,#messageage,#messagedate{
+    color: red;
+}
 .identite{
     display: flex;
     align-items: center;
@@ -69,29 +72,47 @@ input{
 .module{
     margin-top: 12px;
 }
-@media screen and (max-width:1024px){
-    h1{
-        color: blue;
-    }
-}
 @media screen and (max-width:680px){
     h1{
-        font-size: 20px;
+        font-size: 10px;
+    }
+    .identite{
+        display: flex;
     }
    .conteneur{
-    margin: auto;
-    width: 75%;
+    width: 90%;
    }
    .genre,.formation{
-    margin-left: 10px;
+    margin-left: -1px;
    }
    input{
     width: 50%;
    }
    #messagenom,#messageprenom,#messagedate{
+    width: 120%;
     font-size: 10px;
    }
-
+  #age{
+    margin-left: 28px;
+   }
+   
  }
-
- 
+ @media screen and (min-width:681px) and (max-width:1278px){
+    .conteneur{
+        width: 80%;
+    }
+    .identite{
+        margin-left: 1px;
+    }
+    .genre{
+        margin-left: 69px;
+    }
+    .module{
+        margin-left: 36px;
+        margin-bottom: 10px;
+    }
+    .formation{
+        margin-left: 30px;
+    }
+    
+ }

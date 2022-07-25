@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
-    <title>Document</title>
+    <title>Formulaire d'inscription</title>
 </head>
 <body>
     <div class="conteneur">
@@ -14,17 +14,17 @@
             <div>
                <label for="nom">Nom:</label>
                <input type="text" name="" id="nom">
-               <div style="color: red;" id="messagenom"></div>
+               <div id="messagenom"></div>
            </div>
            <div>
                <label for="prenom">Prenom:</label>
                <input type="text" name="" id="prenom">
-               <div style="color: red;" id="messageprenom"></div>
+               <div id="messageprenom"></div>
            </div>
            <div>
                <label for="age">Age:</label>
                <input type="number" name="age" placeholder="Age" id="age">
-               <div style="color: red;" id="messageage"></div>
+               <div id="messageage"></div>
            </div>
            <div class="identites">
                 <label for="" class="genre">Genre:</label>
@@ -44,7 +44,7 @@
            <div>
                <label for="date">Date:</label>
                <input type="date" id="date">
-               <div style="color: red;" id="messagedate"></div>
+               <div  id="messagedate"></div>
            </div>
            <div class="bouton"> 
                <input type="submit" value="submit">    
@@ -65,7 +65,7 @@
          let resultat=document.getElementById('resultat');
          let date=document.getElementById('date').value;
          let messageDate=document.getElementById('messagedate')
-         let dateActuel=new Date();
+         let dateActuel=new Date("2021-12-21");
          let annee=dateActuel.getFullYear();
          let mois=String(dateActuel.getMonth()+1).padStart(2,'0');
          let jour=dateActuel.getDate();
@@ -89,7 +89,7 @@
         }else{
             messageageAge.innerHTML=''
         }
-        if(date != dates){
+        if(date > dates){
             messageDate.innerHTML='date erroné';
             return false
         }else{
