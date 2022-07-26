@@ -3,25 +3,62 @@
     box-sizing: border-box;
 }
 body{
-    background-color: #c7c8c9;
+    background-color: #e7edf1;
+}
+.couleur{
+    color: blue;
 }
 h1{
     text-align: center;
-    margin-bottom: 40px;
+    margin-top: 30px;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif
 }
+.name input{
+    border-radius: 5px;
+    width: 50%;
+    height: 30px;
+
+}
+.nom{
+    margin-right: 222px;
+}
+.prenom{
+    margin-right: 210px;
+}
+.lastname input{
+    border-radius: 5px;
+    width: 50%;
+    margin-left: 22px;
+    height: 30px;
+}
+.age,.date{
+    margin-right: 230px;
+}
+.newage input{
+    border-radius: 5px;
+    width: 50%;
+    height: 30px;
+    margin-right: 12px;
+}
+.nouveauxdate input{
+    width: 50%;
+    height: 30px;
+    border-radius: 5px;
+}
+
 form{
     text-align: center;
 }
 .conteneur{
     background-color: white;
-    width: 40%;
+    width: 50%;
     margin: 60px auto;
     padding: 100px;
     border-radius: 30px;
 }
 input{
     margin: 5px;
-    width: 40%;;
+    width: 40%;
 }
 #nom,#date{
     margin-left: 23px;
@@ -31,22 +68,31 @@ input{
     margin-bottom: 20px;
 }
 .genre{
-    
     margin-left: 90px;
-   
 }
 .bouton input{
-  margin-left:20px;
-  width: 50%;
+  margin-left:120px;
+  width: 16%;
   height: 40px;
   border-radius: 10px;
   margin-top: 20px;
 }
+
 #messagenom,#messageprenom,#messageage{
     font-size: 14px;
 }
 #messagenom,#messageprenom,#messageage,#messagedate{
     color: red;
+}
+.bouton2{
+    background-color: blue;
+    color: white;
+    font-weight: bold;
+}
+.bouton1{
+    background-color: black;
+    color: white;
+    font-weight: bold;
 }
 .identite{
     display: flex;
@@ -55,12 +101,20 @@ input{
     margin-bottom: 20px ;
     margin-left: 4px;
 }
+.bouton2{
+    margin-right: 10px;
+}
+.bouton{
+    margin-left: -20px;
+    width: 93%;
+}
 .identites{
     display: flex;
+    margin-left: 60px;
 }
 .formation{
     display: flex;
-    margin-left: 93px;
+    margin-left:151px;
 }
 
 .programmation{
@@ -69,33 +123,54 @@ input{
     margin-left: 9px;
     width: 140px;
 }
-.module{
-    margin-top: 12px;
-}
 @media screen and (max-width:680px){
     h1{
-        font-size: 10px;
+        font-size: 20px;
+    }
+    .name input{
+        width: 130%;
+    }
+    .lastname input{
+        width: 130%;
+    }
+    #nom,#prenom{
+        margin-left: -1px;
     }
     .identite{
         display: flex;
     }
    .conteneur{
-    width: 90%;
+    width: 100%;
    }
-   .genre,.formation{
-    margin-left: -1px;
+   .genre{
+    margin-left: -61px;
    }
-   input{
-    width: 50%;
+   .formation{
+    margin-left: 1px;
    }
    #messagenom,#messageprenom,#messagedate{
     width: 120%;
     font-size: 10px;
    }
   #age{
-    margin-left: 28px;
+    margin-left: -1px;
+    width: 130%;
    }
-   
+   .module{
+    margin-top: 7px;
+   }
+   .programmation{
+    margin-bottom: 5px;
+   }
+   #date{
+    width: 130%;
+    margin-left: 1px;
+   }
+   .bouton input{
+    width: 100%;
+    margin-left: 28px;
+
+   }
  }
  @media screen and (min-width:681px) and (max-width:1278px){
     .conteneur{

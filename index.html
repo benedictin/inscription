@@ -8,21 +8,21 @@
     <title>Formulaire d'inscription</title>
 </head>
 <body>
+    <h1>Fiche <span class="couleur">D'</span> inscription</h1>
     <div class="conteneur">
         <form action="" name="myform"  onsubmit="return validateform()">
-            <h1>Fiche D'inscription</h1>
-            <div>
-               <label for="nom">Nom:</label>
+            <label for="nom" class="nom">Nom:</label>
+            <div class="name">
                <input type="text" name="" id="nom">
                <div id="messagenom"></div>
            </div>
-           <div>
-               <label for="prenom">Prenom:</label>
+           <label for="prenom" class="prenom">Prenom:</label>
+           <div class="lastname">
                <input type="text" name="" id="prenom">
                <div id="messageprenom"></div>
            </div>
-           <div>
-               <label for="age">Age:</label>
+           <label for="age" class="age">Age:</label>
+           <div class="newage">
                <input type="number" name="age" placeholder="Age" id="age">
                <div id="messageage"></div>
            </div>
@@ -41,16 +41,15 @@
                 </div>
             </div>
             <div id="messageformation"></div>
-           <div>
-               <label for="date">Date:</label>
+            <label for="date" class="date">Date:</label>
+           <div class="nouveauxdate">
                <input type="date" id="date">
                <div  id="messagedate"></div>
            </div>
            <div class="bouton"> 
-               <input type="submit" value="submit">    
+               <input type="submit" value="Envoyer" class="bouton1"> 
+               <input type="reset" value="Renitialiser" class="bouton2">   
            </div>
-           <div id="vide"></div>
-           
       </form>
     </div>
    <script>
